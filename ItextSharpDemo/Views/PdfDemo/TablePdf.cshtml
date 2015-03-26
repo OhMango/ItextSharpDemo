@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.js"></script>
+</head>
+<body>
+
+    <div>
+        <button id="btnSearch" tabindex="999999" class="slbutton" style="border-style: none;">
+            导出</button>
+    </div>
+    <iframe id="exportContainer" style="display: none;"></iframe>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSearch").bind("click", function () {
+                Search();
+            });
+        });
+        function Search() {
+            //导出Csv
+            var src = "/PdfDemo/GetTablePdf";
+            $("#exportContainer").attr("src", src);
+
+        };
+    </script>
+</body>
+</html>
+
